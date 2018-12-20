@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--app main color-->
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#52c9ff</color>
+
+    <!--swipe down refresh animation color-->
+    <color name="orange">#FF9900</color>
+    <color name="green">#009900</color>
+    <color name="blue">#000099</color>
+    <color name="red">#ff0015</color>
+
+    <!--other color-->
+    <color name="ripple_color">#e7e7e7</color>
+    <color name="text_main_color">#232323</color>
+    <color name="text_second_color">#525252</color>
+    <color name="white">#ffffff</color>
+    <color name="separator">#efefef</color>
+
+</resources>

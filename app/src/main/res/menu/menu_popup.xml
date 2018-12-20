@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item
+        android:id="@+id/menu_context_favorite"
+        android:title="@string/option_set_favorite"/>
+
+    <item
+        android:id="@+id/menu_context_share"
+        android:title="@string/option_set_share"/>
+    
+</menu>
