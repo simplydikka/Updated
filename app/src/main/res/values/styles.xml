@@ -13,5 +13,18 @@
         <item name="spinBars">true</item>
         <item name="color">@android:color/white</item>
     </style>
+    <!--Welcome Screen Styles-->
+    <style name="welcomeScreenTitle" parent="AppTheme">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/welcomeTitle</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 
+    <style name="welcomeScreenText" parent="AppTheme">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/welcomeText</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
 </resources>

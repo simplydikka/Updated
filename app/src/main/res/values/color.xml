@@ -17,5 +17,16 @@
     <color name="divider">#f2f2f2</color>
     <color name="text_color">#525252</color>
     <color name="white">#ffffff</color>
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen">#bcb</color>
+    <!-- dots active colors -->
+    <color name="dot_light_screen">#d81b60</color>
 
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen</item>
+    </array>
 </resources>

@@ -63,4 +63,20 @@
     <string name="bookmark_added">Added to Bookmark</string>
     <string name="bookmark_removed">Removed from Bookmark</string>
 
+    <!-- Welcome Screen -->
+
+    <string name="next">Напред</string>
+    <string name="skip">Назад</string>
+    <string name="start">Начало</string>
+
+    <string name="slide_1_title">ВИНАГИ С ТЕБ</string>
+    <string name="slide_1_desc">Пълен каталог с пътните знаци в България за лесна самоподготовка директно в телефона ти!</string>
+
+    <string name="slide_2_title">ЛЕСНА НАВИГАЦИЯ</string>
+    <string name="slide_2_desc">Удобна търсачка, с която да откриеш конкретен знак веднага.</string>
+
+    <string name="slide_3_title">СПИСЪК ЗА БЪРЗ ДОСТЪП</string>
+    <string name="slide_3_desc">Запази знаци от всички категории за лесен достъп при преговор.</string>
+    <string name="placeholder">Placeholder</string>
+
 </resources>
