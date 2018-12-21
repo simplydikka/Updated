@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId 'com.solodroid.androidebookappdemo'
+        applicationId 'tech.studiozebra.pytniznaci'
 
         minSdkVersion 14
         targetSdkVersion 27

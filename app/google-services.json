@@ -1,120 +1,27 @@
 {
   "project_info": {
-    "project_number": "543214849347",
-    "firebase_url": "https://solodroid-projects.firebaseio.com",
-    "project_id": "solodroid-projects",
-    "storage_bucket": "solodroid-projects.appspot.com"
+    "project_number": "703701601803",
+    "firebase_url": "https://road-signs-app.firebaseio.com",
+    "project_id": "road-signs-app",
+    "storage_bucket": "road-signs-app.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:543214849347:android:7fad08b5940471fe",
+        "mobilesdk_app_id": "1:703701601803:android:0b57e87ac5ecee8b",
         "android_client_info": {
-          "package_name": "com.solodroid.yourradioappdemo"
+          "package_name": "tech.studiozebra.pytniznaci"
         }
       },
       "oauth_client": [
         {
-          "client_id": "543214849347-hu8ofspfbog1hnhheuoj8hn52os72kmr.apps.googleusercontent.com",
+          "client_id": "703701601803-dc5i6jdj140tr0kusdq1nsb8e77rtpna.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBQyquEcpEW5JmAMXmDnYPiKy_0xUqO1p8"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:543214849347:android:eaa96a9ab32185b5",
-        "android_client_info": {
-          "package_name": "com.solodroid.androidnewsappdemo"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "543214849347-hu8ofspfbog1hnhheuoj8hn52os72kmr.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBQyquEcpEW5JmAMXmDnYPiKy_0xUqO1p8"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:543214849347:android:e69f767e12231bcf",
-        "android_client_info": {
-          "package_name": "com.solodroid.solowallpaper"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "543214849347-hu8ofspfbog1hnhheuoj8hn52os72kmr.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBQyquEcpEW5JmAMXmDnYPiKy_0xUqO1p8"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:543214849347:android:6d93a3e22dd544e6",
-        "android_client_info": {
-          "package_name": "com.solodroid.androidebookappdemo"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "543214849347-hu8ofspfbog1hnhheuoj8hn52os72kmr.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBQyquEcpEW5JmAMXmDnYPiKy_0xUqO1p8"
+          "current_key": "AIzaSyAIW6EEF2OWPZjiDRTPJ3DIlLVGDedw-HY"
         }
       ],
       "services": {
