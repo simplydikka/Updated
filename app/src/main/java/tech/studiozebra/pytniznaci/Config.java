@@ -15,4 +15,5 @@ public class Config {
     //set true if you want to enable finger swipe left or right to go to previous or next story
     public static final boolean ENABLE_VIEW_PAGER = true;
 
+
 }

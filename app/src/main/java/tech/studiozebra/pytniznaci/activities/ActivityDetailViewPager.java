@@ -12,6 +12,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -31,6 +32,8 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.analytics.FirebaseAnalytics;
+
+import es.dmoral.toasty.Toasty;
 import tech.studiozebra.pytniznaci.Config;
 import tech.studiozebra.pytniznaci.R;
 import tech.studiozebra.pytniznaci.cache.ImageLoader;
@@ -249,7 +252,13 @@ public class ActivityDetailViewPager extends AppCompatActivity {
         str_book_subtitle = book_subtitle[position];
 
         databaseHandler.AddtoFavorite(new ItemFavorite(str_book_cat_id, str_book_cid, str_book_cat_name, str_book_title, str_book_image, str_book_desc, str_book_subtitle));
-        Toast.makeText(getApplicationContext(), R.string.bookmark_added, Toast.LENGTH_SHORT).show();
+
+        //custom toast added to bookmarks
+        Toast toast= Toasty.success(getApplicationContext(),
+                R.string.bookmark_added, Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.BOTTOM,  0, 300);
+        toast.show();
+
         menu.getItem(2).setIcon(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_bookmark_white));
 
         showInterstitialAd();
@@ -259,7 +268,14 @@ public class ActivityDetailViewPager extends AppCompatActivity {
     public void RemoveFav(int position) {
         str_book_cat_id = book_cat_id[position];
         databaseHandler.RemoveFav(new ItemFavorite(str_book_cat_id));
-        Toast.makeText(getApplicationContext(), R.string.bookmark_removed, Toast.LENGTH_SHORT).show();
+
+        //custom toast removed from bookmarks
+        Toast toast= Toasty.error(getApplicationContext(),
+                R.string.bookmark_removed, Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.BOTTOM, 0, 300);
+        toast.show();
+
+
         menu.getItem(2).setIcon(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_bookmark_outline));
 
     }

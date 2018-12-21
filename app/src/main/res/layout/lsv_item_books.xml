@@ -9,7 +9,8 @@
 
         android:foreground="?android:attr/selectableItemBackground"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="wrap_content"
+        android:minHeight="300dp"
         android:layout_margin="8dp"
         app:cardCornerRadius="5dp"
         app:cardElevation="5dp"
@@ -33,7 +34,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:background="@color/white">
 
@@ -59,10 +60,10 @@
                     android:layout_height="match_parent"
                     android:gravity="fill"
                     android:textSize="16sp"
-                    android:maxLines="5"
+                    android:maxLines="4"
                     android:minLines="1"
                     android:ellipsize="end"
-                    android:hyphenationFrequency="full"
+                    android:hyphenationFrequency="normal"
                     android:text="aaa"
                     android:textColor="@color/text_color" />
 

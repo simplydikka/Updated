@@ -11,6 +11,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -28,6 +29,8 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.firebase.analytics.FirebaseAnalytics;
+
+import es.dmoral.toasty.Toasty;
 import tech.studiozebra.pytniznaci.Config;
 import tech.studiozebra.pytniznaci.R;
 import tech.studiozebra.pytniznaci.firebase.Analytics;
@@ -148,7 +151,11 @@ public class ActivityDetailStory extends AppCompatActivity {
         if (JsonUtils.isNetworkAvailable(ActivityDetailStory.this)) {
             new MyTask().execute(Config.SERVER_URL + "/api.php?nid=" + JsonConstant.NEWS_ITEMID);
         } else {
-            Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_SHORT).show();
+            //custom toast error
+            Toast toast= Toasty.error(getApplicationContext(),
+                    R.string.failed_connect_network, Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.BOTTOM, 0, 300);
+            toast.show();
         }
 
     }
@@ -175,8 +182,11 @@ public class ActivityDetailStory extends AppCompatActivity {
             linearLayout.setVisibility(View.VISIBLE);
 
             if (null == result || result.length() == 0) {
-                Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_SHORT).show();
-
+                //custom toast error
+                Toast toast= Toasty.error(getApplicationContext(),
+                        R.string.failed_connect_network, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.BOTTOM, 0, 300);
+                toast.show();
             } else {
 
                 try {
@@ -372,7 +382,12 @@ public class ActivityDetailStory extends AppCompatActivity {
                 if (pojolist.size() == 0) {
 
                     databaseHandler.AddtoFavorite(new ItemFavorite(str_cat_id, str_cid, str_cat_name, str_title, str_image, str_desc, str_date));
-                    Toast.makeText(getApplicationContext(), "Added to Favorite", Toast.LENGTH_SHORT).show();
+
+                    //custom toast added to bookmarks
+                    Toast toast= Toasty.success(getApplicationContext(),
+                            R.string.bookmark_added, Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.BOTTOM,  0, 300);
+                    toast.show();
                     menu.getItem(0).setIcon(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_bookmark_white));
 
                     interstitialAd = new InterstitialAd(ActivityDetailStory.this);
@@ -391,7 +406,13 @@ public class ActivityDetailStory extends AppCompatActivity {
                     if (pojolist.get(0).getCatId().equals(str_cat_id)) {
 
                         databaseHandler.RemoveFav(new ItemFavorite(str_cat_id));
-                        Toast.makeText(getApplicationContext(), "Removed from Favorite", Toast.LENGTH_SHORT).show();
+
+                        //custom toast removed from bookmarks
+                        Toast toast= Toasty.error(getApplicationContext(),
+                                R.string.bookmark_removed, Toast.LENGTH_SHORT);
+                        toast.setGravity(Gravity.BOTTOM, 0, 300);
+                        toast.show();
+
                         menu.getItem(0).setIcon(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_bookmark_outline));
                     }
                 }

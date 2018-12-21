@@ -13,6 +13,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -25,6 +26,8 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.analytics.FirebaseAnalytics;
+
+import es.dmoral.toasty.Toasty;
 import tech.studiozebra.pytniznaci.Config;
 import tech.studiozebra.pytniznaci.R;
 import tech.studiozebra.pytniznaci.firebase.Analytics;
@@ -177,7 +180,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void exitApp() {
         if ((System.currentTimeMillis() - exitTime) > 2000) {
-            Toast.makeText(this, getString(R.string.press_again_to_exit), Toast.LENGTH_SHORT).show();
+            //custom toast info
+            Toast toast= Toasty.info(getApplicationContext(),
+                    R.string.press_again_to_exit, Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.BOTTOM, 0, 300);
+            toast.show();
             exitTime = System.currentTimeMillis();
         } else {
             finish();

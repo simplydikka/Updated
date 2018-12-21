@@ -7,6 +7,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.webkit.WebViewClient;
 import android.widget.Toast;
 import android.view.View.OnKeyListener;
 
+import es.dmoral.toasty.Toasty;
 import tech.studiozebra.pytniznaci.Config;
 import tech.studiozebra.pytniznaci.R;
 
@@ -94,7 +96,11 @@ public class ActivityPdfView extends AppCompatActivity {
 
         @Override
         public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
-            Toast.makeText(getApplicationContext(), "Failed to Connect Network!", Toast.LENGTH_LONG).show();
+            //custom toast error
+            Toast toast= Toasty.error(getApplicationContext(),
+                    R.string.failed_connect_network, Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.BOTTOM, 0, 300);
+            toast.show();
             view.loadUrl("about:blank");
         }
 

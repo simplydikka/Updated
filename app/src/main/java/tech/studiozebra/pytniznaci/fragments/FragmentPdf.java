@@ -16,6 +16,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
 import android.view.GestureDetector;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -25,6 +26,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import es.dmoral.toasty.Toasty;
 import tech.studiozebra.pytniznaci.Config;
 import tech.studiozebra.pytniznaci.R;
 import tech.studiozebra.pytniznaci.activities.ActivityPdfView;
@@ -149,8 +151,11 @@ public class FragmentPdf extends Fragment {
         if (JsonUtils.isNetworkAvailable(getActivity())) {
             new MyTask().execute(Config.SERVER_URL + "/api.php?get_pdf");
         } else {
-            Toast.makeText(getActivity(), "No Internet Connection", Toast.LENGTH_SHORT).show();
-        }
+            //custom toast error
+            Toast toast = Toasty.error(getActivity(),
+                    R.string.failed_connect_network, Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.BOTTOM, 0, 300);
+            toast.show();        }
         return v;
     }
 
@@ -186,8 +191,11 @@ public class FragmentPdf extends Fragment {
             swipeRefreshLayout.setRefreshing(false);
 
             if (null == result || result.length() == 0) {
-                Toast.makeText(getActivity(), "No Internet Connection", Toast.LENGTH_SHORT).show();
-
+                //custom toast error
+                Toast toast = Toasty.error(getActivity(),
+                        R.string.failed_connect_network, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.BOTTOM, 0, 300);
+                toast.show();
             } else {
 
                 try {
@@ -258,8 +266,11 @@ public class FragmentPdf extends Fragment {
             swipeRefreshLayout.setRefreshing(false);
 
             if (null == result || result.length() == 0) {
-                Toast.makeText(getActivity(), getResources().getString(tech.studiozebra.pytniznaci.R.string.failed_connect_network), Toast.LENGTH_SHORT).show();
-
+                //custom toast error
+                Toast toast = Toasty.error(getActivity(),
+                        R.string.failed_connect_network, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.BOTTOM, 0, 300);
+                toast.show();
             } else {
 
                 try {

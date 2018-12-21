@@ -17,6 +17,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.GestureDetector;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -31,6 +32,8 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.analytics.FirebaseAnalytics;
+
+import es.dmoral.toasty.Toasty;
 import tech.studiozebra.pytniznaci.Config;
 import tech.studiozebra.pytniznaci.R;
 import tech.studiozebra.pytniznaci.adapters.RecyclerAdapterStory;
@@ -265,8 +268,11 @@ public class ActivityStoryList extends AppCompatActivity {
             swipeRefreshLayout.setRefreshing(false);
 
             if (null == result || result.length() == 0) {
-                Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_SHORT).show();
-
+                //custom toast error
+                Toast toast= Toasty.error(getApplicationContext(),
+                        R.string.failed_connect_network, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.BOTTOM, 0, 300);
+                toast.show();
             } else {
 
                 try {
@@ -350,8 +356,11 @@ public class ActivityStoryList extends AppCompatActivity {
             swipeRefreshLayout.setRefreshing(false);
 
             if (null == result || result.length() == 0) {
-                Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_SHORT).show();
-
+                //custom toast error
+                Toast toast= Toasty.error(getApplicationContext(),
+                        R.string.failed_connect_network, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.BOTTOM, 0, 300);
+                toast.show();
             } else {
 
                 try {

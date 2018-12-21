@@ -2,15 +2,15 @@
 <resources>
 
     <!--application name-->
-    <string name="app_name">Android Ebook App</string>
+    <string name="app_name">Пътни Знаци</string>
 
     <!--Drawer List Name-->
-    <string name="drawer_books_list">Ebook List</string>
+    <string name="drawer_books_list">Категории</string>
     <string name="drawer_pdf">Pdf</string>
-    <string name="drawer_bookmark">Bookmark</string>
-    <string name="drawer_rate">Rate</string>
-    <string name="drawer_more">More</string>
-    <string name="drawer_other">About</string>
+    <string name="drawer_bookmark">Запазени</string>
+    <string name="drawer_rate">Оцени</string>
+    <string name="drawer_more">Още от студио Зебра</string>
+    <string name="drawer_other">Информация</string>
 
     <!-- Change AdMob Banner and Interstitial Id -->
     <string name="admob_publisher_id">pub-3940256099942544</string>
@@ -19,25 +19,25 @@
     <string name="admob_interstitial_id">ca-app-pub-3940256099942544/1033173712</string>
 
     <!-- play store application link more apps -->
-    <string name="more_apps">https://play.google.com/store/apps/developer?id=Solodroid</string>
-    <string name="privacy_policy_url">https://www.solodroid.net/android-ebook-app/privacy-policy/</string>
+    <string name="more_apps">https://studiozebra.tech</string>
+    <string name="privacy_policy_url">https://studiozebra.tech</string>
 
     <!--app about information-->
-    <string name="app_version">Version 2.1.2</string>
-    <string name="app_copyright">Copyright &#169; 2017 Solodroid Developer \n All rights reserved</string>
-    <string name="app_email">developer.solodroid@gmail.com</string>
-    <string name="rate_summary">Give your rate and feedback</string>
-    <string name="more_summary">More apps from developer</string>
-    <string name="title_app_name">Application Name</string>
-    <string name="title_app_version">Build Version</string>
-    <string name="title_app_email">Email</string>
-    <string name="title_app_copyright">Copyright</string>
+    <string name="app_version">Версия 1.0.1</string>
+    <string name="app_copyright">Авторски права &#169; 2018 Студио Зебра \n\nВсички илюстрации и графики в приложението са авторски и правата за тях принадлежат на Студио Зебра. \n\nИзточниците за всички текстове са посочени непосредствено до тях.\n\nВ случай, че източник липсва следва да се счете, че текстът е авторски. \n\nАвторски права за шаблона: \n&#169; 2017 Soloroid </string>
+    <string name="app_email">contact@studiozebra.tech</string>
+    <string name="rate_summary">Оцени, коментирай или остави предложения за апликацията</string>
+    <string name="more_summary">Виж всички апликации от Студио Зебра</string>
+    <string name="title_app_name">Име</string>
+    <string name="title_app_version">Версия</string>
+    <string name="title_app_email">Имейл за връзка</string>
+    <string name="title_app_copyright">Авторски права</string>
     <string name="title_app_rate">Rate</string>
     <string name="title_app_more">More</string>
 
     <!--network-->
-    <string name="failed_connect_network">No Internet Connection!!</string>
-    <string name="loading">Loading&#8230;</string>
+    <string name="failed_connect_network">Няма връзка с интернет</string>
+    <string name="loading">Зареждане&#8230;</string>
 
     <!--firebase analytics-->
     <string name="analytics_item_id_1">main_menu</string>
@@ -48,20 +48,20 @@
     <string name="analytics_item_name_3">Story Detail</string>
 
     <!--others-->
-    <string name="img_no">No Bookmark Found</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_next">Next Page</string>
-    <string name="menu_fav">Fav</string>
-    <string name="menu_back">Previous Page</string>
-    <string name="menu_favorite">My Favorite</string>
+    <string name="img_no">Няма запазени знаци</string>
+    <string name="menu_share">Сподели</string>
+    <string name="menu_next">Следващ знак</string>
+    <string name="menu_fav">Запази</string>
+    <string name="menu_back">Предишен знак</string>
+    <string name="menu_favorite">Списък за бърз достъп</string>
     <string name="search_hint">Hint</string>
-    <string name="menu_search">Search</string>
+    <string name="menu_search">Търси</string>
     <string name="drawer_open">Menu opened</string>
     <string name="drawer_close">Menu closed</string>
-    <string name="press_again_to_exit">Press again to exit app</string>
+    <string name="press_again_to_exit">Натисни отново за да излезеш</string>
 
-    <string name="bookmark_added">Added to Bookmark</string>
-    <string name="bookmark_removed">Removed from Bookmark</string>
+    <string name="bookmark_added">Знакът е запазен в списъка</string>
+    <string name="bookmark_removed">Знакът е премахнат от списъка</string>
 
     <!-- Welcome Screen -->
 
