@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import tech.studiozebra.pytniznaci.R;
 import tech.studiozebra.pytniznaci.adapters.AdapterAbout;
@@ -25,9 +26,9 @@ public class FragmentAbout extends Fragment {
             tech.studiozebra.pytniznaci.R.drawable.ic_other_appname,
             tech.studiozebra.pytniznaci.R.drawable.ic_other_build,
             tech.studiozebra.pytniznaci.R.drawable.ic_other_email,
-            tech.studiozebra.pytniznaci.R.drawable.ic_other_copyright,
             tech.studiozebra.pytniznaci.R.drawable.ic_other_rate,
-            tech.studiozebra.pytniznaci.R.drawable.ic_other_more
+            tech.studiozebra.pytniznaci.R.drawable.ic_other_more,
+            tech.studiozebra.pytniznaci.R.drawable.ic_other_copyright
 
     };
 
@@ -41,13 +42,25 @@ public class FragmentAbout extends Fragment {
         subtitleId = getResources().getStringArray(tech.studiozebra.pytniznaci.R.array.subtitle);
 
         AdapterAbout adapter = new AdapterAbout(getActivity(), titleId, subtitleId, imageId);
-        list = (ListView) v.findViewById(tech.studiozebra.pytniznaci.R.id.list);
+        list = v.findViewById(R.id.list);
         list.setAdapter(adapter);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 4) {
+                if (position == 2) {
+                    Intent intent = new Intent(Intent.ACTION_SEND);
+                    intent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"studiozebra.dev@gmail.com"});
+                    intent.putExtra(Intent.EXTRA_SUBJECT, "Препоръка/проблем с приложението Пътни Знаци");
+                    intent.setType("text/plain");
+                    if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+                        getActivity().startActivity(Intent.createChooser(intent, "Избери приложение:"));
+                    } else {
+                        Toast.makeText(getActivity(), "Няма инсталирани приложения, които да изпълнят действието", Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+                if (position == 3) {
                     final String appName = getActivity().getPackageName();
                     try {
                         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appName)));
@@ -55,9 +68,10 @@ public class FragmentAbout extends Fragment {
                         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + appName)));
                     }
                 }
-                if (position == 5) {
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(tech.studiozebra.pytniznaci.R.string.more_apps))));
+                if (position == 4) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.more_apps))));
                 }
+
             }
         });
 
