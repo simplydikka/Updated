@@ -45,7 +45,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ActivityDetailStory extends AppCompatActivity {
-
+    TextView storySubtitle;
     int position;
     String str_cid, str_cat_id, str_cat_image, str_cat_name, str_title, str_image, str_desc, str_date;
     TextView book_title, book_subtitle;
@@ -133,6 +133,8 @@ public class ActivityDetailStory extends AppCompatActivity {
         linearLayout = (LinearLayout) findViewById(R.id.content);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         imageView = (ImageView) findViewById(R.id.image);
+
+
 
         book_title = (TextView) findViewById(R.id.title);
         book_subtitle = (TextView) findViewById(R.id.subtitle);
@@ -222,13 +224,13 @@ public class ActivityDetailStory extends AppCompatActivity {
             str_desc = object.getStoryDescription();
             str_image = object.getStoryImage();
             str_date = object.getStorySubTitle();
-
             book_title.setText(str_title);
             book_subtitle.setText(str_date);
 
             news_desc.setBackgroundColor(Color.parseColor("#FFFFFF"));
             news_desc.setFocusableInTouchMode(false);
             news_desc.setFocusable(false);
+
             news_desc.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {

@@ -9,8 +9,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.solodroid.androidebookappdemo.Config;
 import com.solodroid.androidebookappdemo.R;
 import com.solodroid.androidebookappdemo.models.ItemStoryList;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -19,6 +21,7 @@ public class RecyclerAdapterStory extends RecyclerView.Adapter<RecyclerAdapterSt
     private Context context;
     private List<ItemStoryList> arrayItemStoryList;
     private ItemStoryList itemStoryList;
+    private Context iamgecontext;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -34,7 +37,6 @@ public class RecyclerAdapterStory extends RecyclerView.Adapter<RecyclerAdapterSt
             sub_title = (TextView) view.findViewById(R.id.sub_title);
             image = (ImageView) view.findViewById(R.id.image);
             linearLayout = (LinearLayout) view.findViewById(R.id.linearLayout);
-
         }
 
     }
@@ -43,6 +45,8 @@ public class RecyclerAdapterStory extends RecyclerView.Adapter<RecyclerAdapterSt
         this.context = context;
         this.arrayItemStoryList = arrayItemStoryList;
     }
+
+
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -59,9 +63,14 @@ public class RecyclerAdapterStory extends RecyclerView.Adapter<RecyclerAdapterSt
         itemStoryList = arrayItemStoryList.get(position);
 
         holder.title.setText(itemStoryList.getStoryTitle());
-        holder.sub_title.setText(itemStoryList.getStorySubTitle());
+        holder.sub_title.setText(itemStoryList.getStorySubTitle()) ;
+
+        Picasso.with(holder.image.getContext()).load(Config.SERVER_URL + "/upload/thumbs/" +
+                itemStoryList.getStoryImage()).placeholder(R.drawable.ic_loading).into(holder.image);
+
 
     }
+
 
     @Override
     public int getItemCount() {

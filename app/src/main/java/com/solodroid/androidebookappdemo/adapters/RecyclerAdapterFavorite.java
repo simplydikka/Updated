@@ -9,8 +9,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.solodroid.androidebookappdemo.Config;
 import com.solodroid.androidebookappdemo.R;
 import com.solodroid.androidebookappdemo.models.ItemFavorite;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -60,7 +62,8 @@ public class RecyclerAdapterFavorite extends RecyclerView.Adapter<RecyclerAdapte
 
         holder.title.setText(itemStoryList.getStoryTitle());
         holder.sub_title.setText(itemStoryList.getStorySubTitle());
-
+        Picasso.with(holder.image.getContext()).load(Config.SERVER_URL + "/upload/thumbs/" +
+                itemStoryList.getStoryImage()).placeholder(R.drawable.ic_loading).into(holder.image);
     }
 
     @Override
