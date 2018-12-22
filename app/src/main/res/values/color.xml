@@ -2,9 +2,10 @@
 <resources>
 
     <!--app main color-->
-    <color name="colorPrimary">#2196F3</color>
-    <color name="colorPrimaryDark">#1976D2</color>
-    <color name="colorAccent">#52c9ff</color>
+    <color name="colorPrimary">#d43224</color>
+    <color name="colorPrimaryDark">#be2417</color>
+    <color name="colorAccent">#ed5548</color>
+
 
     <!--swipe down refresh animation color-->
     <color name="orange">#FF9900</color>
