@@ -1,39 +1,65 @@
 {
   "project_info": {
-    "project_number": "703701601803",
-    "firebase_url": "https://road-signs-app.firebaseio.com",
-    "project_id": "road-signs-app",
-    "storage_bucket": "road-signs-app.appspot.com"
+    "project_number": "998907269890",
+    "project_id": "roadsigns-33733",
+    "storage_bucket": "roadsigns-33733.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:703701601803:android:0b57e87ac5ecee8b",
+        "mobilesdk_app_id": "1:998907269890:android:4ef14249365d4277db681b",
+        "android_client_info": {
+          "package_name": "com.app.pytniznaci"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "998907269890-59fde6e62ej1abtj9gu73vo73f4ugis3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASNuad_t994wK6QXsGRyK1aSeQik_1yUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "998907269890-59fde6e62ej1abtj9gu73vo73f4ugis3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998907269890:android:8f9813f74f25353fdb681b",
         "android_client_info": {
           "package_name": "tech.studiozebra.pytniznaci"
         }
       },
       "oauth_client": [
         {
-          "client_id": "703701601803-dc5i6jdj140tr0kusdq1nsb8e77rtpna.apps.googleusercontent.com",
+          "client_id": "998907269890-59fde6e62ej1abtj9gu73vo73f4ugis3.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAIW6EEF2OWPZjiDRTPJ3DIlLVGDedw-HY"
+          "current_key": "AIzaSyASNuad_t994wK6QXsGRyK1aSeQik_1yUc"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "998907269890-59fde6e62ej1abtj9gu73vo73f4ugis3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
